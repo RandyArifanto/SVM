@@ -16,7 +16,7 @@ public class Produk {
     private int jumlah;
     private long harga;
     Scanner Scan = new Scanner(System.in);
-
+    //Constructor
     public Produk(int id_produk, int jumlah, long harga) {
         this.id_produk = id_produk;
         this.jumlah = jumlah;
@@ -48,21 +48,21 @@ public class Produk {
     public void setHarga(long harga) {
         this.harga = harga;
     }
-
+    //Method untuk menampilkan Produk
     public void printProduk() {
         System.out.println(" - Jumlah: " + this.getJumlah());
         System.out.println(" - Harga : " + this.getHarga());
         System.out.println("");
     }
-
+    //Method untuk mengurangi jumlah produk karena telah terjual
     public void jualProduk() {
         this.jumlah = this.jumlah - 1;
     }
-
+    //Method untuk cek apakah produk tersedia apa tidak
     public boolean isProdukAvailable() {
         return (this.jumlah > 0);
     }
-
+    //Method untuk melakukan edit produk, termasuk menampilkan halaman edit produk.
     public void editProduk() {
         int jumlahBaru;
         long hargaBaru;
